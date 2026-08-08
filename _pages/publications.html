@@ -12,9 +12,11 @@ author_profile: true
 <div class="publications">
 
 {% for post in site.publications %}
-
-<div class="publication-item"> {{ post.citation }} </div>
-
+  {% if post.category == "journal" %}
+    <div class="publication-item">
+      {{ post.citation }}
+    </div>
+ {% endif %}
 {% endfor %}
 
 </div>
